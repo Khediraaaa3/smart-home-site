@@ -1,0 +1,40 @@
+<html>
+<head>
+  <title>Smart Home Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1></h1>
+  <header id="top">
+    <h2>Maison Intelligente</h2>
+    <img src="logo.png">
+  </header>
+
+  <section id="login">
+    <input type="text" id="username" placeholder="Utilisateur">
+    <input type="password" id="password">
+    <button onclick="login()">Connexion</button>
+  </section>
+
+  <section id="devices">
+    <h2>Appareils</h2>
+    <div id="deviceList"></div>
+    <input type="text" id="newDevice" placeholder="Nom de l'appareil">
+    <button onclick="addDevice()">Ajouter</button>
+  </section>
+
+  <section id="devices">
+    <h2>Température</h2>
+    <span id="temp" style="color:red; font-size:20px">--</span>
+    <button onclick="setTemperature(document.getElementById('temp').innerText)">Régler</button>
+  </section>
+
+  <section id="search">
+    <input type="text" id="q" placeholder="Rechercher une pièce">
+    <button onclick="searchRoom()">Chercher</button>
+    <div id="result"></div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
