@@ -11,7 +11,7 @@ function login() {
   var p = document.getElementById("password").value;
   if (u == "admin" && p == ADMIN_PASSWORD) {     // [Smell] == au lieu de ===
     console.log("Connecté avec " + p);           // [Smell/Vuln] log du mot de passe
-    localStorage.setItem("token", Math.random().toString(36)); // [Hotspot] token faible "hellloooooo"
+    localStorage.setItem("token", Math.random().toString(36)); // [Hotspot] token faible
   } else {
     alert("Erreur");
   }
@@ -96,3 +96,8 @@ function getLabel(state) {
 
 // TODO: ajouter la gestion des scènes                    [Smell] TODO
 // function oldRender() { document.title = "old"; }       [Smell] code commenté
+
+if (typeof module !== "undefined") {
+  module.exports = { login, addDevice, renderDevices, searchRoom, setTemperature,
+    computeMode, turnOnLight, turnOnHeater, getLabel, devices };
+}
