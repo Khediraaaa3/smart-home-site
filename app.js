@@ -11,7 +11,7 @@ function login() {
   var p = document.getElementById("password").value;
   if (u == "admin" && p == ADMIN_PASSWORD) {     // [Smell] == au lieu de ===
     console.log("Connecté avec " + p);           // [Smell/Vuln] log du mot de passe
-    localStorage.setItem("token", Math.random().toString(36)); // [Hotspot] token faible
+    localStorage.setItem("token", Math.random().toString(36)); // [Hotspot] token faible "hellloooooo"
   } else {
     alert("Erreur");
   }
