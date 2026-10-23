@@ -16,3 +16,6 @@ Ce code contient des erreurs VOLONTAIRES. Ne jamais le déployer.
 | server.js | Hotspot | CORS * |
 | index.html | Bug/Accessibilité | pas de lang, img sans alt, champ sans label, id dupliqué, h1 vide |
 | style.css | Bug | couleur invalide, règle vide, propriété dupliquée |
+
+
+"helloooo"
